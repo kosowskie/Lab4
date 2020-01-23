@@ -1,0 +1,20 @@
+INSERT INTO `users` (`id`, `username`, `password`) VALUES ('5', 'emanuel', 'admin');
+INSERT INTO `admin` (`id`, `admin`) VALUES ('1', 'admin');
+
+SELECT * FROM `users`
+
+SELECT * FROM `users` WHERE id=1
+
+SELECT * FROM `users` WHERE `password`='admin'
+
+SELECT * FROM users WHERE `username` IS NULL
+
+UPDATE users SET username = "kosowskie" WHERE id = 3
+
+SELECT * FROM users ORDER BY id DESC
+SELECT * FROM users ORDER BY id ASC
+SELECT * FROM users ORDER BY username DESC
+
+DELETE FROM users WHERE id=8
+
+SELECT users.id, users.username AS "nazwaAdmina", admin.id, admin.admin FROM admin INNER JOIN users ON admin.admin = users.username
